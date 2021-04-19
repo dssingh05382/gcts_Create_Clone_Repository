@@ -1,6 +1,6 @@
 @Library('piper-lib-os') _
 node() {
-    stage('prepare') { 
+    stage('Create Repository') { 
 		gctsCreateRepository(
 		  script: this,
 		  host: 'https://fc-pun01-hana.india.rapidigm.com:8001',
@@ -9,12 +9,12 @@ node() {
 		  repository: 'DEV003',
 		  remoteRepositoryURL: 'https://github.com/skondekar/shubh',
 		  role: 'SOURCE',
-		  vSID: 'S4A'
+		  vSID: 'S4D'
 		  )	
 	}
 }
 node() {
-    stage('prepare') { 
+    stage('Clone Repository') { 
 		gctsCloneRepository(
 		  script: this,
 		  host: 'https://fc-pun01-hana.india.rapidigm.com:8001',
