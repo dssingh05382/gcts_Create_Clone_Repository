@@ -3,7 +3,7 @@ node() {
     stage('Create Repository') { 
 		gctsCreateRepository(
 		  script: this,
-		  host: 'https://10.34.156.145:8001',
+		  host: 'http://10.34.156.145:8002',
 		  client: '300',
 		  abapCredentialsId: 'ABAPUserPasswordCredentialsId',
 		  repository: 'DEV003',
@@ -17,7 +17,7 @@ node() {
     stage('Clone Repository') { 
 		gctsCloneRepository(
 		  script: this,
-		  host: 'https://fc-pun01-hana.india.rapidigm.com:8001',
+		  host: 'http://10.34.156.145:8002',
 		  client: '300',
 		  abapCredentialsId: 'ABAPUserPasswordCredentialsId',
 		  repository: 'DEV003'
